@@ -1,0 +1,11 @@
+package br.com.dio.controller;
+
+import java.io.Serializable;
+
+import javax.inject.Named;
+
+public class EventosBean implements Serializable {
+	@Named
+	private static final long serialVersionUID = 1L;
+
+}

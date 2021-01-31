@@ -1,0 +1,44 @@
+package br.com.dio.controller;
+
+import java.util.List;
+import java.io.Serializable;
+import java.util.ArrayList;
+
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import br.com.dio.model.Evento;
+
+public class EventoBean implements Serializable {
+	@Named
+	private static final long serialVersionUID = 1L;
+
+	@Inject
+	private Evento evento;
+
+	private List<Evento> eventos = new ArrayList<>();
+
+	public Evento getEvento() {
+		return evento;
+	}
+
+	public void setEvento(Evento evento) {
+		this.evento = evento;
+	}
+
+	public List<Evento> getEventos() {
+		return eventos;
+	}
+
+	public void setEventos(List<Evento> eventos) {
+		this.eventos = eventos;
+	}
+	
+	public String adicionarEvento() {
+		eventos.add(evento);
+		System.out.println("Evento" + evento.getNome()+" Cadastrado com sucesso!");
+		return "";
+		
+	}
+
+}
